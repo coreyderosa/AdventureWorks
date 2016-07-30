@@ -6,5 +6,5 @@ AS
 
 SELECT * 
 FROM Person.Address
-WHERE City = @City
+WHERE City LIKE @City + '%'
 GO
