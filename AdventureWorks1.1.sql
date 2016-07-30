@@ -1,8 +1,10 @@
 USE AdventureWorks2012
 GO
 
-CREATE PROC dbo.uspGetAddress
+ALTER PROC dbo.uspGetAddress @City nvarchar(30)
 AS
 
 SELECT * 
 FROM Person.Address
+WHERE City = @City
+GO
